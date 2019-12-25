@@ -33,7 +33,7 @@ Run project
 ./ic-service
 ```
 
-### Kafka setup
+### Kafka setup 
 
     
 ```
@@ -48,6 +48,7 @@ Run kafka server
 kafka_2.11-1.0.0/bin/kafka-server-start.sh kafka_2.11-1.0.0/config/server.properties
 ```
 
+#### Run Postgres 
 Please refer `migration.up.sql.go` to view the database structure for icecream
 
 ### Developer Notes
@@ -65,7 +66,7 @@ This service is authenticated by JWT token. Please use the below login when maki
  password: zalora
 ```
 
-###Producer
+### Producer
 
 Here, All actions are transactional. The complete transaction includes create/update the postgres database and sending the business object to Kafka as producer model.
 

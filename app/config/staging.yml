@@ -1,8 +1,16 @@
 server:
-  port: ":5000"
+  port: ":5050"
 
-sectors:
-  - id: "14567"
-    companies:
-      - name: "atlas"
-        response: "loc"
+postgres:
+  host: "localhost:5432"
+  username: "postgres"
+  password: "postgres"
+  database: "zalora"
+  poolsize: 10
+  readTimeout: 60000
+  writeTimeout: 60000
+
+kafka:
+  brokers:
+    - "localhost:9092"
+  icecreamcreatetopic: "ice_cream_create_dev"
